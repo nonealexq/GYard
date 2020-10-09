@@ -10,3 +10,5 @@ C:\Users\Kristina\source\repos\GY_V0\GY_V0\obj\Debug\GY_V0.exe
 C:\Users\Kristina\source\repos\GY_V0\GY_V0\obj\Debug\GY_V0.pdb
 C:\Users\Kristina\source\repos\GY_V0\GY_V0\obj\Debug\GY_V0.YardAll.resources
 C:\Users\Kristina\source\repos\GY_V0\GY_V0\obj\Debug\GY_V0.Client.resources
+C:\Users\Kristina\source\repos\GY_V0\GY_V0\obj\Debug\GY_V0.Yard1.resources
+C:\Users\Kristina\source\repos\GY_V0\GY_V0\obj\Debug\GY_V0.Yard2.resources

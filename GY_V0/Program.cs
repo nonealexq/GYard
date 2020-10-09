@@ -16,7 +16,9 @@ namespace GY_V0
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainPage());
+            var mainform = new MainPage();
+            mainform.Show();
+            Application.Run();
         }
     }
 }
