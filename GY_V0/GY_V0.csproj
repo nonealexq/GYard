@@ -93,6 +93,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Yard1.resx">
+      <DependentUpon>Yard1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yard2.resx">
+      <DependentUpon>Yard2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="YardAll.resx">
       <DependentUpon>YardAll.cs</DependentUpon>
     </EmbeddedResource>

@@ -26,12 +26,20 @@ namespace GY_V0
         {
             YardAll newYard = new YardAll();
             newYard.Show();
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Client newClient = new Client();
             newClient.Show();
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Exit();
         }
     }
 }
