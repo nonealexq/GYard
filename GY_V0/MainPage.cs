@@ -41,5 +41,12 @@ namespace GY_V0
             this.Close();
             Application.Exit();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Search_Client SClient = new Search_Client();
+            SClient.Show();
+            this.Close();
+        }
     }
 }

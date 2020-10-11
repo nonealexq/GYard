@@ -225,7 +225,7 @@ namespace GY_V0
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Name = "Client";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Клиенты";
             this.Load += new System.EventHandler(this.Client_Load);
             this.ResumeLayout(false);
