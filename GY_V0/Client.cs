@@ -39,17 +39,13 @@ namespace GY_V0
 
         }
 
-        // private string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Kristina\\source\\repos\\GY_V0\\ADB\\GY_V0.mdf;Integrated Security=True;Connect Timeout=30";
-
-
         private void button1_Click(object sender, EventArgs e)
         {
         }
 
-        string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Kristina\\source\\repos\\GY_V0\\ADB\\GY_V0.mdf;Integrated Security=True;Connect Timeout=30";
-        string q = "INSERT INTO Client(client_id, last_name, first_name, patronymic, date_birth, date_death, yard, coor_1, coor_2) " +
-            "VALUES(@client_id, @last_name, @first_name, @patronymic, @date_birth, @date_death, @yard, @coor_1,@coor_2);";
-
+        string conString = "Data Source = (LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Kristina\\source\\repos\\GY_V0\\ADB\\GYard.mdf;Integrated Security = True; Connect Timeout = 30;";
+        string q = "INSERT INTO Client(client_id, last_name, first_name, patronymic, date_birth, date_death, yard, coor_1, coor_2)" +
+            "VALUES(@client_id, @last_name, @first_name, @patronymic, @date_birth, @date_death, @yard, @coor_1, @coor_2);";
 
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -70,21 +66,6 @@ namespace GY_V0
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Данные добавлены");
                 con.Close();
-
-
-                //SqlConnection con = new SqlConnection(conString);
-                //con.Open();
-
-                //if (con.State == System.Data.ConnectionState.Open)
-                // {
-                //    string q = "insert into Client(client_id, last_name, first_name, patronymic, date_birth, date_death, yard, coor_1, coor_2)" +
-                //         " values('" + client_id.Text.ToString() + "','" + last_name.Text.ToString() + "','" + first_name.Text.ToString() + "','" + patronymic.Text.ToString() + "','" + date_birth.Value.Date + "','" + date_death.Value.Date + "','" + yard.Text.ToString() + "','" + coor_1.Text.ToString() + "','" + coor_2.Text.ToString() + "') ";
-                //    SqlCommand cmd = new SqlCommand(q, con);
-                //    cmd.ExecuteNonQuery();
-                //     MessageBox.Show("Данные добавлены");
-                //  }
-
-                //  con.Close();
             }
         }
 
