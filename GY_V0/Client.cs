@@ -18,6 +18,7 @@ namespace GY_V0
         {
             InitializeComponent();
         }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -60,9 +61,9 @@ namespace GY_V0
         }
         private void button2_Click(object sender, EventArgs e)
         {
+            this.Visible = false;
             MainPage mainform = new MainPage();
             mainform.Show();
-            this.Close();
         }
         private void date_birth_ValueChanged(object sender, EventArgs e)
         {
@@ -91,6 +92,23 @@ namespace GY_V0
                 date_birth.Format = DateTimePickerFormat.Custom;
                 date_birth.CustomFormat = " ";
             }
+        }
+
+        private void Client_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show(
+            "Вы действительно хотите выйти из программы?",
+            "Завершение программы",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Warning);
+            if (dialog == DialogResult.Yes)
+                {
+                Application.ExitThread();
+                }
+            else
+                {
+                e.Cancel = true;
+                }
         }
     }
 }

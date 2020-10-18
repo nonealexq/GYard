@@ -76,6 +76,8 @@
             this.Name = "YardAll";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Кладбища";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.YardAll_FormClosing);
+            this.Load += new System.EventHandler(this.YardAll_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
