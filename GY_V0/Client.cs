@@ -18,35 +18,26 @@ namespace GY_V0
         {
             InitializeComponent();
         }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
-
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
-
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
 
         }
-
         private void Client_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-        }
-
-        string conString = "Data Source = (LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Kristina\\source\\repos\\GY_V0\\ADB\\GYard.mdf;Integrated Security = True; Connect Timeout = 30;";
+        string conString = "Data Source = (LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\GYard\\GYard.mdf;Integrated Security = True; Connect Timeout = 30;";
         string q = "INSERT INTO Client(last_name, first_name, patronymic, date_birth, date_death, yard, coor_1, coor_2)" +
             "VALUES(@last_name, @first_name, @patronymic, @date_birth, @date_death, @yard, @coor_1, @coor_2);";
-
         private void button1_Click_1(object sender, EventArgs e)
         {
             using (SqlConnection con = new SqlConnection(conString))
@@ -67,12 +58,39 @@ namespace GY_V0
                 con.Close();
             }
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             MainPage mainform = new MainPage();
             mainform.Show();
             this.Close();
+        }
+        private void date_birth_ValueChanged(object sender, EventArgs e)
+        {
+            if (date_birth.Checked == true)
+            {
+                date_birth.Enabled = true;
+                date_birth.Format = DateTimePickerFormat.Long;
+            }
+            else
+            {
+                date_birth.Enabled = false;
+                date_birth.Format = DateTimePickerFormat.Custom;
+                date_birth.CustomFormat = " ";
+            }
+        }
+        private void date_death_ValueChanged(object sender, EventArgs e)
+        {
+            if (date_birth.Checked == true)
+            {
+                date_birth.Enabled = true;
+                date_birth.Format = DateTimePickerFormat.Long;
+            }
+            else
+            {
+                date_birth.Enabled = false;
+                date_birth.Format = DateTimePickerFormat.Custom;
+                date_birth.CustomFormat = " ";
+            }
         }
     }
 }
