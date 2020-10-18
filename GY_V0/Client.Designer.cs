@@ -31,6 +31,7 @@ namespace GY_V0
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -42,13 +43,18 @@ namespace GY_V0
             this.last_name = new System.Windows.Forms.TextBox();
             this.first_name = new System.Windows.Forms.TextBox();
             this.patronymic = new System.Windows.Forms.TextBox();
-            this.yard = new System.Windows.Forms.TextBox();
             this.coor_1 = new System.Windows.Forms.TextBox();
             this.coor_2 = new System.Windows.Forms.TextBox();
             this.date_birth = new System.Windows.Forms.DateTimePicker();
             this.date_death = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.gYardDataSetYard = new GY_V0.GYardDataSetYard();
+            this.yardBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.yardTableAdapter = new GY_V0.GYardDataSetYardTableAdapters.YardTableAdapter();
+            this.yard = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.gYardDataSetYard)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yardBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -147,13 +153,6 @@ namespace GY_V0
             this.patronymic.Size = new System.Drawing.Size(213, 20);
             this.patronymic.TabIndex = 10;
             // 
-            // yard
-            // 
-            this.yard.Location = new System.Drawing.Point(244, 179);
-            this.yard.Name = "yard";
-            this.yard.Size = new System.Drawing.Size(213, 20);
-            this.yard.TabIndex = 11;
-            // 
             // coor_1
             // 
             this.coor_1.Location = new System.Drawing.Point(244, 205);
@@ -208,18 +207,46 @@ namespace GY_V0
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // gYardDataSetYard
+            // 
+            this.gYardDataSetYard.DataSetName = "GYardDataSetYard";
+            this.gYardDataSetYard.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // yardBindingSource
+            // 
+            this.yardBindingSource.DataMember = "Yard";
+            this.yardBindingSource.DataSource = this.gYardDataSetYard;
+            // 
+            // yardTableAdapter
+            // 
+            this.yardTableAdapter.ClearBeforeFill = true;
+            // 
+            // yard
+            // 
+            this.yard.AllowDrop = true;
+            this.yard.DataSource = this.yardBindingSource;
+            this.yard.DisplayMember = "yard_name";
+            this.yard.FormattingEnabled = true;
+            this.yard.Location = new System.Drawing.Point(244, 179);
+            this.yard.Name = "yard";
+            this.yard.Size = new System.Drawing.Size(213, 21);
+            this.yard.TabIndex = 21;
+            this.yard.ValueMember = "yard_name";
+            this.yard.SelectedIndexChanged += new System.EventHandler(this.yard_SelectedIndexChanged);
+            // 
             // Client
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.yard);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.date_death);
             this.Controls.Add(this.date_birth);
             this.Controls.Add(this.coor_2);
             this.Controls.Add(this.coor_1);
-            this.Controls.Add(this.yard);
             this.Controls.Add(this.patronymic);
             this.Controls.Add(this.first_name);
             this.Controls.Add(this.last_name);
@@ -231,11 +258,14 @@ namespace GY_V0
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
+            this.KeyPreview = true;
             this.Name = "Client";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Клиенты";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Client_FormClosing);
             this.Load += new System.EventHandler(this.Client_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gYardDataSetYard)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yardBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,12 +285,15 @@ namespace GY_V0
         private System.Windows.Forms.TextBox last_name;
         private System.Windows.Forms.TextBox first_name;
         private System.Windows.Forms.TextBox patronymic;
-        private System.Windows.Forms.TextBox yard;
         private System.Windows.Forms.TextBox coor_1;
         private System.Windows.Forms.TextBox coor_2;
         private System.Windows.Forms.DateTimePicker date_birth;
         private System.Windows.Forms.DateTimePicker date_death;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        }
+        private GYardDataSetYard gYardDataSetYard;
+        private System.Windows.Forms.BindingSource yardBindingSource;
+        private GYardDataSetYardTableAdapters.YardTableAdapter yardTableAdapter;
+        private System.Windows.Forms.ComboBox yard;
+    }
 }

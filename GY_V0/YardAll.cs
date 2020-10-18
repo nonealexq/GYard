@@ -56,5 +56,12 @@ namespace GY_V0
                 e.Cancel = true;
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            YardAdd yardaddform = new YardAdd();
+            yardaddform.Show();
+            this.Visible = false;
+        }
     }
 }

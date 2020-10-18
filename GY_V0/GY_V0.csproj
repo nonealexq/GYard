@@ -66,6 +66,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GYardDataSetClient.xsd</DependentUpon>
     </Compile>
+    <Compile Include="GYardDataSetYard.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GYardDataSetYard.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Search_Client.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +82,12 @@
     </Compile>
     <Compile Include="Yard2.Designer.cs">
       <DependentUpon>Yard2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YardAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YardAdd.Designer.cs">
+      <DependentUpon>YardAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="YardAll.cs">
       <SubType>Form</SubType>
@@ -128,6 +139,9 @@
     <EmbeddedResource Include="Yard2.resx">
       <DependentUpon>Yard2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="YardAdd.resx">
+      <DependentUpon>YardAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="YardAll.resx">
       <DependentUpon>YardAll.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,6 +155,17 @@
     </None>
     <None Include="GYardDataSetClient.xss">
       <DependentUpon>GYardDataSetClient.xsd</DependentUpon>
+    </None>
+    <None Include="GYardDataSetYard.xsc">
+      <DependentUpon>GYardDataSetYard.xsd</DependentUpon>
+    </None>
+    <None Include="GYardDataSetYard.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GYardDataSetYard.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GYardDataSetYard.xss">
+      <DependentUpon>GYardDataSetYard.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

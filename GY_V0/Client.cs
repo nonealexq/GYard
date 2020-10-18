@@ -33,7 +33,9 @@ namespace GY_V0
         }
         private void Client_Load(object sender, EventArgs e)
         {
-
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "gYardDataSetYard.Yard". При необходимости она может быть перемещена или удалена.
+            this.yardTableAdapter.Fill(this.gYardDataSetYard.Yard);
+            yard.SelectedIndex = -1;
         }
 
         string conString = "Data Source = (LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\GYard\\GYard.mdf;Integrated Security = True; Connect Timeout = 30;";
@@ -109,6 +111,16 @@ namespace GY_V0
                 {
                 e.Cancel = true;
                 }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void yard_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
