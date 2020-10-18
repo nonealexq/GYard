@@ -169,17 +169,23 @@ namespace GY_V0
             // 
             // date_birth
             // 
+            this.date_birth.Checked = false;
             this.date_birth.Location = new System.Drawing.Point(244, 127);
             this.date_birth.Name = "date_birth";
+            this.date_birth.ShowCheckBox = true;
             this.date_birth.Size = new System.Drawing.Size(213, 20);
             this.date_birth.TabIndex = 14;
+            this.date_birth.ValueChanged += new System.EventHandler(this.date_birth_ValueChanged);
             // 
             // date_death
             // 
+            this.date_death.Checked = false;
             this.date_death.Location = new System.Drawing.Point(244, 150);
             this.date_death.Name = "date_death";
+            this.date_death.ShowCheckBox = true;
             this.date_death.Size = new System.Drawing.Size(213, 20);
             this.date_death.TabIndex = 15;
+            this.date_death.ValueChanged += new System.EventHandler(this.date_death_ValueChanged);
             // 
             // button1
             // 

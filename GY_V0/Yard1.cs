@@ -16,7 +16,6 @@ namespace GY_V0
         {
             InitializeComponent();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             YardAll yardform = new YardAll();
