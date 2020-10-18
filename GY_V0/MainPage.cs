@@ -24,24 +24,45 @@ namespace GY_V0
         {
             YardAll newYard = new YardAll();
             newYard.Show();
-            this.Close();
+            this.Visible = false;
         }
         private void button2_Click(object sender, EventArgs e)
         {
             Client newClient = new Client();
             newClient.Show();
-            this.Close();
+            this.Visible = false;
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Close();
             Application.Exit();
         }
         private void button4_Click(object sender, EventArgs e)
         {
             Search_Client SClient = new Search_Client();
             SClient.Show();
-            this.Close();
+            this.Visible = false;
+        }
+
+        private void MainPage_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainPage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show(
+            "Вы действительно хотите выйти из программы?",
+            "Завершение программы",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Warning);
+            if (dialog == DialogResult.Yes)
+            {
+                Application.ExitThread();
+            }
+            else
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

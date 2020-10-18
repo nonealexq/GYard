@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 
 namespace GY_V0
 {
@@ -231,8 +232,9 @@ namespace GY_V0
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Name = "Client";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Клиенты";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Client_FormClosing);
             this.Load += new System.EventHandler(this.Client_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -260,5 +262,5 @@ namespace GY_V0
         private System.Windows.Forms.DateTimePicker date_death;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-    }
+        }
 }

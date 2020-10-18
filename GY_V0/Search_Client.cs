@@ -42,7 +42,7 @@ namespace GY_V0
         {
             MainPage mainform = new MainPage();
             mainform.Show();
-            this.Close();
+            this.Visible = false;
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -87,6 +87,23 @@ namespace GY_V0
                 adapt.Fill(dt);
                 dataGridView1.DataSource = dt;
                 con.Close();
+            }
+        }
+
+        private void Search_Client_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show(
+            "Вы действительно хотите выйти из программы?",
+            "Завершение программы",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Warning);
+            if (dialog == DialogResult.Yes)
+            {
+                Application.ExitThread();
+            }
+            else
+            {
+                e.Cancel = true;
             }
         }
     }
