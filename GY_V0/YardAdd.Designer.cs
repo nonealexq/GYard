@@ -28,80 +28,101 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.BackToYardAll = new System.Windows.Forms.Button();
+            this.NewYardName = new System.Windows.Forms.TextBox();
+            this.NewYardAddress = new System.Windows.Forms.TextBox();
             this.yard_name = new System.Windows.Forms.TextBox();
             this.yard_address = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.AddNewYard = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // BackToYardAll
             // 
-            this.button1.Location = new System.Drawing.Point(58, 328);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 43);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Назад";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BackToYardAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BackToYardAll.Location = new System.Drawing.Point(50, 471);
+            this.BackToYardAll.Name = "BackToYardAll";
+            this.BackToYardAll.Size = new System.Drawing.Size(110, 50);
+            this.BackToYardAll.TabIndex = 3;
+            this.BackToYardAll.Text = "Назад";
+            this.BackToYardAll.UseVisualStyleBackColor = true;
+            this.BackToYardAll.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // NewYardName
             // 
-            this.textBox1.Location = new System.Drawing.Point(65, 49);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(95, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TabStop = false;
-            this.textBox1.Text = "Название";
+            this.NewYardName.BackColor = System.Drawing.Color.SlateGray;
+            this.NewYardName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NewYardName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NewYardName.Location = new System.Drawing.Point(60, 199);
+            this.NewYardName.Name = "NewYardName";
+            this.NewYardName.ReadOnly = true;
+            this.NewYardName.Size = new System.Drawing.Size(100, 15);
+            this.NewYardName.TabIndex = 1;
+            this.NewYardName.TabStop = false;
+            this.NewYardName.Text = "Название:";
             // 
-            // textBox2
+            // NewYardAddress
             // 
-            this.textBox2.Location = new System.Drawing.Point(65, 94);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(95, 20);
-            this.textBox2.TabIndex = 2;
-            this.textBox2.TabStop = false;
-            this.textBox2.Text = "Адрес";
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.NewYardAddress.BackColor = System.Drawing.Color.SlateGray;
+            this.NewYardAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NewYardAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NewYardAddress.Location = new System.Drawing.Point(60, 240);
+            this.NewYardAddress.Name = "NewYardAddress";
+            this.NewYardAddress.ReadOnly = true;
+            this.NewYardAddress.Size = new System.Drawing.Size(100, 15);
+            this.NewYardAddress.TabIndex = 2;
+            this.NewYardAddress.TabStop = false;
+            this.NewYardAddress.Text = "Адрес:";
+            this.NewYardAddress.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // yard_name
             // 
-            this.yard_name.Location = new System.Drawing.Point(198, 49);
+            this.yard_name.AcceptsTab = true;
+            this.yard_name.AllowDrop = true;
+            this.yard_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.yard_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.yard_name.Location = new System.Drawing.Point(183, 199);
+            this.yard_name.MaxLength = 50;
             this.yard_name.Name = "yard_name";
-            this.yard_name.Size = new System.Drawing.Size(95, 20);
-            this.yard_name.TabIndex = 3;
+            this.yard_name.Size = new System.Drawing.Size(609, 22);
+            this.yard_name.TabIndex = 1;
             // 
             // yard_address
             // 
-            this.yard_address.Location = new System.Drawing.Point(198, 94);
+            this.yard_address.AcceptsTab = true;
+            this.yard_address.AllowDrop = true;
+            this.yard_address.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.yard_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.yard_address.Location = new System.Drawing.Point(183, 242);
+            this.yard_address.MaxLength = 150;
             this.yard_address.Name = "yard_address";
-            this.yard_address.Size = new System.Drawing.Size(95, 20);
-            this.yard_address.TabIndex = 4;
+            this.yard_address.Size = new System.Drawing.Size(609, 22);
+            this.yard_address.TabIndex = 2;
             // 
-            // button2
+            // AddNewYard
             // 
-            this.button2.Location = new System.Drawing.Point(198, 328);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 43);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Добавить";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.AddNewYard.BackColor = System.Drawing.Color.Gainsboro;
+            this.AddNewYard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddNewYard.Location = new System.Drawing.Point(183, 471);
+            this.AddNewYard.Name = "AddNewYard";
+            this.AddNewYard.Size = new System.Drawing.Size(110, 50);
+            this.AddNewYard.TabIndex = 4;
+            this.AddNewYard.Text = "Добавить";
+            this.AddNewYard.UseVisualStyleBackColor = false;
+            this.AddNewYard.Click += new System.EventHandler(this.button2_Click);
             // 
             // YardAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.AddNewYard);
             this.Controls.Add(this.yard_address);
             this.Controls.Add(this.yard_name);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.NewYardAddress);
+            this.Controls.Add(this.NewYardName);
+            this.Controls.Add(this.BackToYardAll);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "YardAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Добавление кладбища";
@@ -113,11 +134,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button BackToYardAll;
+        private System.Windows.Forms.TextBox NewYardName;
+        private System.Windows.Forms.TextBox NewYardAddress;
         private System.Windows.Forms.TextBox yard_name;
         private System.Windows.Forms.TextBox yard_address;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button AddNewYard;
     }
 }

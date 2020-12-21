@@ -19,80 +19,121 @@ namespace GY_V0
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
         private void Client_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "gYardDataSetYard.Yard". При необходимости она может быть перемещена или удалена.
             this.yardTableAdapter.Fill(this.gYardDataSetYard.Yard);
-            yard.SelectedIndex = -1;
+            YardName.SelectedIndex = -1;
         }
 
-        string conString = "Data Source = (LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\GYard\\GYard.mdf;Integrated Security = True; Connect Timeout = 30;";
-        string q = "INSERT INTO Client(last_name, first_name, patronymic, date_birth, date_death, yard, coor_1, coor_2)" +
-            "VALUES(@last_name, @first_name, @patronymic, @date_birth, @date_death, @yard, @coor_1, @coor_2);";
-        private void button1_Click_1(object sender, EventArgs e)
+        private void SaveClient_Click(object sender, EventArgs e)
         {
-            using (SqlConnection con = new SqlConnection(conString))
-            using (SqlCommand cmd = new SqlCommand(q, con))
+            //проверка на заполненность фамилии
+            if (LastName.Text == "")
             {
-                cmd.Parameters.Add(new SqlParameter("@last_name", last_name.Text));
-                cmd.Parameters.Add(new SqlParameter("@first_name", first_name.Text));
-                cmd.Parameters.Add(new SqlParameter("@patronymic", patronymic.Text));
-                cmd.Parameters.Add(new SqlParameter("@date_birth", date_birth.Value.Date));
-                cmd.Parameters.Add(new SqlParameter("@date_death", date_death.Value.Date));
-                cmd.Parameters.Add(new SqlParameter("@yard", yard.Text));
-                cmd.Parameters.Add(new SqlParameter("@coor_1", coor_1.Text));
-                cmd.Parameters.Add(new SqlParameter("@coor_2", coor_2.Text));
-
-                con.Open();
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Данные добавлены");
-                con.Close();
+                DialogResult = MessageBox.Show("Поле Фамилия не заполнено!",
+                    "Ошибка!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                return;
             }
+            //проверка на заполненность имени
+            if (FirstName.Text == "")
+            {
+                DialogResult = MessageBox.Show("Поле Имя не заполнено!",
+                    "Ошибка!",
+                   MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                return;
+            }
+            //проверка на заполненность отчества
+            if (Patronymic.Text == "")
+            {
+                DialogResult = MessageBox.Show("Поле Отчетсво не заполнено!",
+                    "Ошибка!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                return;
+            }
+            //проверка на заполненность кладбища
+            if (YardName.Text == "")
+            {
+                DialogResult = MessageBox.Show("Поле Кладбище не заполнено!",
+                    "Ошибка!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                return;
+            }
+            //проверка на заполненность координат
+            if (GPS1.Text == "")
+            {
+                DialogResult dialog = MessageBox.Show(
+                    "Вы не заполнили поле Координата 1. Продолжить?",
+                    "Внимание!",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Warning);
+                if (dialog == DialogResult.Yes)
+                {
+                    InfoToDataBase();
+                    return;
+                }
+                else
+                {
+                    return;
+                }
+            }
+            else if (GPS2.Text == "")
+            {
+                DialogResult dialog = MessageBox.Show(
+                    "Вы не заполнили поле Координата 2. Продолжить?",
+                    "Внимание!",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Warning);
+                if (dialog == DialogResult.Yes)
+                {
+                    InfoToDataBase();
+                    return;
+                }
+                else
+                {
+                    return;
+                }
+            };
+            //вызов метода, который кладет данные в базу
+            InfoToDataBase();
         }
-        private void button2_Click(object sender, EventArgs e)
+        private void BackToMain_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            MainPage mainform = new MainPage();
+            MainScreen mainform = new MainScreen();
             mainform.Show();
         }
-        private void date_birth_ValueChanged(object sender, EventArgs e)
+        private void DateBirth_ValueChanged(object sender, EventArgs e)
         {
-            if (date_birth.Checked == true)
+            if (DateBirth.Checked == true)
             {
-                date_birth.Enabled = true;
-                date_birth.Format = DateTimePickerFormat.Long;
+                DateBirth.Enabled = true;
+                DateBirth.Format = DateTimePickerFormat.Long;
             }
             else
             {
-                date_birth.Enabled = false;
-                date_birth.Format = DateTimePickerFormat.Custom;
-                date_birth.CustomFormat = " ";
+                DateBirth.Enabled = false;
+                DateBirth.Format = DateTimePickerFormat.Custom;
+                DateBirth.CustomFormat = " ";
             }
         }
-        private void date_death_ValueChanged(object sender, EventArgs e)
+        private void DateDeath_ValueChanged(object sender, EventArgs e)
         {
-            if (date_birth.Checked == true)
+            if (DateBirth.Checked == true)
             {
-                date_birth.Enabled = true;
-                date_birth.Format = DateTimePickerFormat.Long;
+                DateBirth.Enabled = true;
+                DateBirth.Format = DateTimePickerFormat.Long;
             }
             else
             {
-                date_birth.Enabled = false;
-                date_birth.Format = DateTimePickerFormat.Custom;
-                date_birth.CustomFormat = " ";
+                DateBirth.Enabled = false;
+                DateBirth.Format = DateTimePickerFormat.Custom;
+                DateBirth.CustomFormat = " ";
             }
         }
 
@@ -104,23 +145,39 @@ namespace GY_V0
             MessageBoxButtons.YesNo,
             MessageBoxIcon.Warning);
             if (dialog == DialogResult.Yes)
-                {
+            {
                 Application.ExitThread();
-                }
+            }
             else
-                {
+            {
                 e.Cancel = true;
-                }
+            }
         }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        
+        //метод, который кладет данные в базу
+        private void InfoToDataBase()
         {
+            string conString = "Data Source = (LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\GYard\\GYard.mdf;Integrated Security = True; Connect Timeout = 30;";
+            string q = "INSERT INTO Client(last_name, first_name, patronymic, date_birth, date_death, yard, coor_1, coor_2)" +
+                "VALUES(@last_name, @first_name, @patronymic, @date_birth, @date_death, @yard, @coor_1, @coor_2);";
 
-        }
+            using (SqlConnection con = new SqlConnection(conString))
+            using (SqlCommand cmd = new SqlCommand(q, con))
+            {
+                cmd.Parameters.Add(new SqlParameter("@last_name", LastName.Text));
+                cmd.Parameters.Add(new SqlParameter("@first_name", FirstName.Text));
+                cmd.Parameters.Add(new SqlParameter("@patronymic", Patronymic.Text));
+                cmd.Parameters.Add(new SqlParameter("@date_birth", DateBirth.Value.Date));
+                cmd.Parameters.Add(new SqlParameter("@date_death", DateDeath.Value.Date));
+                cmd.Parameters.Add(new SqlParameter("@yard", YardName.Text));
+                cmd.Parameters.Add(new SqlParameter("@coor_1", GPS1.Text));
+                cmd.Parameters.Add(new SqlParameter("@coor_2", GPS2.Text));
 
-        private void yard_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+                con.Open();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Данные добавлены");
+                con.Close();
+            }
         }
     }
 }
