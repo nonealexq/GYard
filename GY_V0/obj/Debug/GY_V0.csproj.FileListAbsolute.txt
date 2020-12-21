@@ -2,7 +2,6 @@ C:\Users\Kristina\source\repos\GY_V0\GY_V0\obj\Debug\GY_V0.csprojAssemblyReferen
 C:\Users\Kristina\source\repos\GY_V0\GY_V0\obj\Debug\GY_V0.Properties.Resources.resources
 C:\Users\Kristina\source\repos\GY_V0\GY_V0\obj\Debug\GY_V0.csproj.GenerateResource.cache
 C:\Users\Kristina\source\repos\GY_V0\GY_V0\obj\Debug\GY_V0.csproj.CoreCompileInputs.cache
-C:\Users\Kristina\source\repos\GY_V0\GY_V0\obj\Debug\GY_V0.MainPage.resources
 C:\Users\Kristina\source\repos\GY_V0\GY_V0\bin\Debug\GY_V0.exe.config
 C:\Users\Kristina\source\repos\GY_V0\GY_V0\bin\Debug\GY_V0.exe
 C:\Users\Kristina\source\repos\GY_V0\GY_V0\bin\Debug\GY_V0.pdb
@@ -10,5 +9,9 @@ C:\Users\Kristina\source\repos\GY_V0\GY_V0\obj\Debug\GY_V0.exe
 C:\Users\Kristina\source\repos\GY_V0\GY_V0\obj\Debug\GY_V0.pdb
 C:\Users\Kristina\source\repos\GY_V0\GY_V0\obj\Debug\GY_V0.YardAll.resources
 C:\Users\Kristina\source\repos\GY_V0\GY_V0\obj\Debug\GY_V0.Client.resources
-C:\Users\Kristina\source\repos\GY_V0\GY_V0\obj\Debug\GY_V0.Yard1.resources
-C:\Users\Kristina\source\repos\GY_V0\GY_V0\obj\Debug\GY_V0.Yard2.resources
+C:\Users\Kristina\source\repos\GY_V0\GY_V0\bin\Debug\GYard.mdf
+C:\Users\Kristina\source\repos\GY_V0\GY_V0\bin\Debug\GYard_log.ldf
+C:\Users\Kristina\source\repos\GY_V0\GY_V0\obj\Debug\GY_V0.YardAdd.resources
+C:\Users\Kristina\source\repos\GY_V0\GY_V0\obj\Debug\GY_V0.SearchClient.resources
+C:\Users\Kristina\source\repos\GY_V0\GY_V0\obj\Debug\GY_V0.ClientInfo.resources
+C:\Users\Kristina\source\repos\GY_V0\GY_V0\obj\Debug\GY_V0.MainScreen.resources

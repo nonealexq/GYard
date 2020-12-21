@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 
 namespace GY_V0
 {
@@ -30,224 +31,290 @@ namespace GY_V0
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.last_name = new System.Windows.Forms.TextBox();
-            this.first_name = new System.Windows.Forms.TextBox();
-            this.patronymic = new System.Windows.Forms.TextBox();
-            this.yard = new System.Windows.Forms.TextBox();
-            this.coor_1 = new System.Windows.Forms.TextBox();
-            this.coor_2 = new System.Windows.Forms.TextBox();
-            this.date_birth = new System.Windows.Forms.DateTimePicker();
-            this.date_death = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.client_id = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
+            this.NewFirstName = new System.Windows.Forms.TextBox();
+            this.NewLastName = new System.Windows.Forms.TextBox();
+            this.NewPatronymic = new System.Windows.Forms.TextBox();
+            this.NewDateBirth = new System.Windows.Forms.TextBox();
+            this.NewDateDeath = new System.Windows.Forms.TextBox();
+            this.NewYard = new System.Windows.Forms.TextBox();
+            this.NewGPS1 = new System.Windows.Forms.TextBox();
+            this.NewGPS2 = new System.Windows.Forms.TextBox();
+            this.LastName = new System.Windows.Forms.TextBox();
+            this.FirstName = new System.Windows.Forms.TextBox();
+            this.Patronymic = new System.Windows.Forms.TextBox();
+            this.GPS1 = new System.Windows.Forms.TextBox();
+            this.GPS2 = new System.Windows.Forms.TextBox();
+            this.DateBirth = new System.Windows.Forms.DateTimePicker();
+            this.DateDeath = new System.Windows.Forms.DateTimePicker();
+            this.SaveClient = new System.Windows.Forms.Button();
+            this.BackToMain = new System.Windows.Forms.Button();
+            this.gYardDataSetYard = new GY_V0.GYardDataSetYard();
+            this.yardBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.yardTableAdapter = new GY_V0.GYardDataSetYardTableAdapters.YardTableAdapter();
+            this.YardName = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.gYardDataSetYard)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yardBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // NewFirstName
             // 
-            this.textBox1.Location = new System.Drawing.Point(62, 75);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(93, 20);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Имя";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.NewFirstName.BackColor = System.Drawing.Color.SlateGray;
+            this.NewFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NewFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NewFirstName.Location = new System.Drawing.Point(79, 133);
+            this.NewFirstName.Name = "NewFirstName";
+            this.NewFirstName.ReadOnly = true;
+            this.NewFirstName.Size = new System.Drawing.Size(110, 15);
+            this.NewFirstName.TabIndex = 0;
+            this.NewFirstName.TabStop = false;
+            this.NewFirstName.Text = "Имя:";
             // 
-            // textBox2
+            // NewLastName
             // 
-            this.textBox2.Location = new System.Drawing.Point(62, 49);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(93, 20);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.Text = "Фамилия";
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.NewLastName.BackColor = System.Drawing.Color.SlateGray;
+            this.NewLastName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NewLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NewLastName.Location = new System.Drawing.Point(79, 107);
+            this.NewLastName.Name = "NewLastName";
+            this.NewLastName.ReadOnly = true;
+            this.NewLastName.Size = new System.Drawing.Size(110, 15);
+            this.NewLastName.TabIndex = 1;
+            this.NewLastName.TabStop = false;
+            this.NewLastName.Text = "Фамилия:";
             // 
-            // textBox3
+            // NewPatronymic
             // 
-            this.textBox3.Location = new System.Drawing.Point(62, 101);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(93, 20);
-            this.textBox3.TabIndex = 2;
-            this.textBox3.Text = "Отчество";
+            this.NewPatronymic.BackColor = System.Drawing.Color.SlateGray;
+            this.NewPatronymic.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NewPatronymic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NewPatronymic.Location = new System.Drawing.Point(79, 159);
+            this.NewPatronymic.Name = "NewPatronymic";
+            this.NewPatronymic.ReadOnly = true;
+            this.NewPatronymic.Size = new System.Drawing.Size(110, 15);
+            this.NewPatronymic.TabIndex = 2;
+            this.NewPatronymic.TabStop = false;
+            this.NewPatronymic.Text = "Отчество:";
             // 
-            // textBox4
+            // NewDateBirth
             // 
-            this.textBox4.Location = new System.Drawing.Point(62, 127);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(93, 20);
-            this.textBox4.TabIndex = 3;
-            this.textBox4.Text = "Дата рождения";
+            this.NewDateBirth.BackColor = System.Drawing.Color.SlateGray;
+            this.NewDateBirth.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NewDateBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NewDateBirth.Location = new System.Drawing.Point(79, 185);
+            this.NewDateBirth.Name = "NewDateBirth";
+            this.NewDateBirth.ReadOnly = true;
+            this.NewDateBirth.Size = new System.Drawing.Size(110, 15);
+            this.NewDateBirth.TabIndex = 3;
+            this.NewDateBirth.TabStop = false;
+            this.NewDateBirth.Text = "Дата рождения:";
             // 
-            // textBox5
+            // NewDateDeath
             // 
-            this.textBox5.Location = new System.Drawing.Point(62, 153);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(93, 20);
-            this.textBox5.TabIndex = 4;
-            this.textBox5.Text = "Дата смерти";
+            this.NewDateDeath.BackColor = System.Drawing.Color.SlateGray;
+            this.NewDateDeath.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NewDateDeath.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NewDateDeath.Location = new System.Drawing.Point(79, 211);
+            this.NewDateDeath.Name = "NewDateDeath";
+            this.NewDateDeath.ReadOnly = true;
+            this.NewDateDeath.Size = new System.Drawing.Size(110, 15);
+            this.NewDateDeath.TabIndex = 4;
+            this.NewDateDeath.TabStop = false;
+            this.NewDateDeath.Text = "Дата смерти:";
             // 
-            // textBox6
+            // NewYard
             // 
-            this.textBox6.Location = new System.Drawing.Point(62, 179);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(93, 20);
-            this.textBox6.TabIndex = 5;
-            this.textBox6.Text = "Кладбище";
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            this.NewYard.BackColor = System.Drawing.Color.SlateGray;
+            this.NewYard.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NewYard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NewYard.Location = new System.Drawing.Point(79, 237);
+            this.NewYard.Name = "NewYard";
+            this.NewYard.ReadOnly = true;
+            this.NewYard.Size = new System.Drawing.Size(110, 15);
+            this.NewYard.TabIndex = 5;
+            this.NewYard.TabStop = false;
+            this.NewYard.Text = "Кладбище:";
             // 
-            // textBox7
+            // NewGPS1
             // 
-            this.textBox7.Location = new System.Drawing.Point(62, 205);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(93, 20);
-            this.textBox7.TabIndex = 6;
-            this.textBox7.Text = "Координата 1";
+            this.NewGPS1.BackColor = System.Drawing.Color.SlateGray;
+            this.NewGPS1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NewGPS1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NewGPS1.Location = new System.Drawing.Point(79, 263);
+            this.NewGPS1.Name = "NewGPS1";
+            this.NewGPS1.ReadOnly = true;
+            this.NewGPS1.Size = new System.Drawing.Size(110, 15);
+            this.NewGPS1.TabIndex = 6;
+            this.NewGPS1.TabStop = false;
+            this.NewGPS1.Text = "Координата 1:";
             // 
-            // textBox8
+            // NewGPS2
             // 
-            this.textBox8.Location = new System.Drawing.Point(62, 231);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(93, 20);
-            this.textBox8.TabIndex = 7;
-            this.textBox8.Text = "Координата 2";
+            this.NewGPS2.BackColor = System.Drawing.Color.SlateGray;
+            this.NewGPS2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NewGPS2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NewGPS2.Location = new System.Drawing.Point(79, 289);
+            this.NewGPS2.Name = "NewGPS2";
+            this.NewGPS2.ReadOnly = true;
+            this.NewGPS2.Size = new System.Drawing.Size(110, 15);
+            this.NewGPS2.TabIndex = 7;
+            this.NewGPS2.TabStop = false;
+            this.NewGPS2.Text = "Координата 2:";
             // 
-            // last_name
+            // LastName
             // 
-            this.last_name.Location = new System.Drawing.Point(244, 49);
-            this.last_name.Name = "last_name";
-            this.last_name.Size = new System.Drawing.Size(213, 20);
-            this.last_name.TabIndex = 8;
+            this.LastName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LastName.Location = new System.Drawing.Point(261, 107);
+            this.LastName.MaxLength = 20;
+            this.LastName.Name = "LastName";
+            this.LastName.Size = new System.Drawing.Size(213, 22);
+            this.LastName.TabIndex = 1;
             // 
-            // first_name
+            // FirstName
             // 
-            this.first_name.Location = new System.Drawing.Point(244, 75);
-            this.first_name.Name = "first_name";
-            this.first_name.Size = new System.Drawing.Size(213, 20);
-            this.first_name.TabIndex = 9;
+            this.FirstName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FirstName.Location = new System.Drawing.Point(261, 133);
+            this.FirstName.MaxLength = 20;
+            this.FirstName.Name = "FirstName";
+            this.FirstName.Size = new System.Drawing.Size(213, 22);
+            this.FirstName.TabIndex = 2;
             // 
-            // patronymic
+            // Patronymic
             // 
-            this.patronymic.Location = new System.Drawing.Point(244, 101);
-            this.patronymic.Name = "patronymic";
-            this.patronymic.Size = new System.Drawing.Size(213, 20);
-            this.patronymic.TabIndex = 10;
+            this.Patronymic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Patronymic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Patronymic.Location = new System.Drawing.Point(261, 159);
+            this.Patronymic.MaxLength = 20;
+            this.Patronymic.Name = "Patronymic";
+            this.Patronymic.Size = new System.Drawing.Size(213, 22);
+            this.Patronymic.TabIndex = 3;
             // 
-            // yard
+            // GPS1
             // 
-            this.yard.Location = new System.Drawing.Point(244, 179);
-            this.yard.Name = "yard";
-            this.yard.Size = new System.Drawing.Size(213, 20);
-            this.yard.TabIndex = 11;
+            this.GPS1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.GPS1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.GPS1.Location = new System.Drawing.Point(261, 263);
+            this.GPS1.MaxLength = 10;
+            this.GPS1.Name = "GPS1";
+            this.GPS1.Size = new System.Drawing.Size(213, 22);
+            this.GPS1.TabIndex = 7;
             // 
-            // coor_1
+            // GPS2
             // 
-            this.coor_1.Location = new System.Drawing.Point(244, 205);
-            this.coor_1.Name = "coor_1";
-            this.coor_1.Size = new System.Drawing.Size(213, 20);
-            this.coor_1.TabIndex = 12;
+            this.GPS2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.GPS2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.GPS2.Location = new System.Drawing.Point(261, 289);
+            this.GPS2.MaxLength = 10;
+            this.GPS2.Name = "GPS2";
+            this.GPS2.Size = new System.Drawing.Size(213, 22);
+            this.GPS2.TabIndex = 8;
             // 
-            // coor_2
+            // DateBirth
             // 
-            this.coor_2.Location = new System.Drawing.Point(244, 231);
-            this.coor_2.Name = "coor_2";
-            this.coor_2.Size = new System.Drawing.Size(213, 20);
-            this.coor_2.TabIndex = 13;
+            this.DateBirth.Checked = false;
+            this.DateBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DateBirth.Location = new System.Drawing.Point(261, 185);
+            this.DateBirth.Name = "DateBirth";
+            this.DateBirth.ShowCheckBox = true;
+            this.DateBirth.Size = new System.Drawing.Size(213, 22);
+            this.DateBirth.TabIndex = 4;
+            this.DateBirth.ValueChanged += new System.EventHandler(this.DateBirth_ValueChanged);
             // 
-            // date_birth
+            // DateDeath
             // 
-            this.date_birth.Location = new System.Drawing.Point(244, 127);
-            this.date_birth.Name = "date_birth";
-            this.date_birth.Size = new System.Drawing.Size(213, 20);
-            this.date_birth.TabIndex = 14;
+            this.DateDeath.Checked = false;
+            this.DateDeath.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DateDeath.Location = new System.Drawing.Point(261, 208);
+            this.DateDeath.Name = "DateDeath";
+            this.DateDeath.ShowCheckBox = true;
+            this.DateDeath.Size = new System.Drawing.Size(213, 22);
+            this.DateDeath.TabIndex = 5;
+            this.DateDeath.ValueChanged += new System.EventHandler(this.DateDeath_ValueChanged);
             // 
-            // date_death
+            // SaveClient
             // 
-            this.date_death.Location = new System.Drawing.Point(244, 150);
-            this.date_death.Name = "date_death";
-            this.date_death.Size = new System.Drawing.Size(213, 20);
-            this.date_death.TabIndex = 15;
+            this.SaveClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SaveClient.Location = new System.Drawing.Point(261, 442);
+            this.SaveClient.Name = "SaveClient";
+            this.SaveClient.Size = new System.Drawing.Size(100, 50);
+            this.SaveClient.TabIndex = 10;
+            this.SaveClient.Text = "Сохранить";
+            this.SaveClient.UseVisualStyleBackColor = true;
+            this.SaveClient.Click += new System.EventHandler(this.SaveClient_Click);
             // 
-            // button1
+            // BackToMain
             // 
-            this.button1.Location = new System.Drawing.Point(244, 289);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Сохранить";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.BackToMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BackToMain.Location = new System.Drawing.Point(80, 442);
+            this.BackToMain.Name = "BackToMain";
+            this.BackToMain.Size = new System.Drawing.Size(110, 50);
+            this.BackToMain.TabIndex = 9;
+            this.BackToMain.Text = "Назад";
+            this.BackToMain.UseVisualStyleBackColor = true;
+            this.BackToMain.Click += new System.EventHandler(this.BackToMain_Click);
             // 
-            // textBox15
+            // gYardDataSetYard
             // 
-            this.textBox15.Location = new System.Drawing.Point(62, 23);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.ReadOnly = true;
-            this.textBox15.Size = new System.Drawing.Size(93, 20);
-            this.textBox15.TabIndex = 17;
-            this.textBox15.Text = "Client_ID";
+            this.gYardDataSetYard.DataSetName = "GYardDataSetYard";
+            this.gYardDataSetYard.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // client_id
+            // yardBindingSource
             // 
-            this.client_id.Location = new System.Drawing.Point(244, 23);
-            this.client_id.Name = "client_id";
-            this.client_id.Size = new System.Drawing.Size(213, 20);
-            this.client_id.TabIndex = 18;
+            this.yardBindingSource.DataMember = "Yard";
+            this.yardBindingSource.DataSource = this.gYardDataSetYard;
             // 
-            // button2
+            // yardTableAdapter
             // 
-            this.button2.Location = new System.Drawing.Point(63, 288);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 23);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "Назад";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.yardTableAdapter.ClearBeforeFill = true;
+            // 
+            // YardName
+            // 
+            this.YardName.AllowDrop = true;
+            this.YardName.DataSource = this.yardBindingSource;
+            this.YardName.DisplayMember = "yard_name";
+            this.YardName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.YardName.FormattingEnabled = true;
+            this.YardName.Location = new System.Drawing.Point(261, 237);
+            this.YardName.Name = "YardName";
+            this.YardName.Size = new System.Drawing.Size(213, 24);
+            this.YardName.TabIndex = 6;
+            this.YardName.ValueMember = "yard_name";
             // 
             // Client
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.client_id);
-            this.Controls.Add(this.textBox15);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.date_death);
-            this.Controls.Add(this.date_birth);
-            this.Controls.Add(this.coor_2);
-            this.Controls.Add(this.coor_1);
-            this.Controls.Add(this.yard);
-            this.Controls.Add(this.patronymic);
-            this.Controls.Add(this.first_name);
-            this.Controls.Add(this.last_name);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.YardName);
+            this.Controls.Add(this.BackToMain);
+            this.Controls.Add(this.SaveClient);
+            this.Controls.Add(this.DateDeath);
+            this.Controls.Add(this.DateBirth);
+            this.Controls.Add(this.GPS2);
+            this.Controls.Add(this.GPS1);
+            this.Controls.Add(this.Patronymic);
+            this.Controls.Add(this.FirstName);
+            this.Controls.Add(this.LastName);
+            this.Controls.Add(this.NewGPS2);
+            this.Controls.Add(this.NewGPS1);
+            this.Controls.Add(this.NewYard);
+            this.Controls.Add(this.NewDateDeath);
+            this.Controls.Add(this.NewDateBirth);
+            this.Controls.Add(this.NewPatronymic);
+            this.Controls.Add(this.NewLastName);
+            this.Controls.Add(this.NewFirstName);
+            this.KeyPreview = true;
             this.Name = "Client";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Клиенты";
+            this.Text = "Добавление клиента";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Client_FormClosing);
             this.Load += new System.EventHandler(this.Client_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gYardDataSetYard)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yardBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,25 +323,26 @@ namespace GY_V0
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox last_name;
-        private System.Windows.Forms.TextBox first_name;
-        private System.Windows.Forms.TextBox patronymic;
-        private System.Windows.Forms.TextBox yard;
-        private System.Windows.Forms.TextBox coor_1;
-        private System.Windows.Forms.TextBox coor_2;
-        private System.Windows.Forms.DateTimePicker date_birth;
-        private System.Windows.Forms.DateTimePicker date_death;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox client_id;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox NewFirstName;
+        private System.Windows.Forms.TextBox NewLastName;
+        private System.Windows.Forms.TextBox NewPatronymic;
+        private System.Windows.Forms.TextBox NewDateBirth;
+        private System.Windows.Forms.TextBox NewDateDeath;
+        private System.Windows.Forms.TextBox NewYard;
+        private System.Windows.Forms.TextBox NewGPS1;
+        private System.Windows.Forms.TextBox NewGPS2;
+        private System.Windows.Forms.TextBox LastName;
+        private System.Windows.Forms.TextBox FirstName;
+        private System.Windows.Forms.TextBox Patronymic;
+        private System.Windows.Forms.TextBox GPS1;
+        private System.Windows.Forms.TextBox GPS2;
+        private System.Windows.Forms.DateTimePicker DateBirth;
+        private System.Windows.Forms.DateTimePicker DateDeath;
+        private System.Windows.Forms.Button SaveClient;
+        private System.Windows.Forms.Button BackToMain;
+        private GYardDataSetYard gYardDataSetYard;
+        private System.Windows.Forms.BindingSource yardBindingSource;
+        private GYardDataSetYardTableAdapters.YardTableAdapter yardTableAdapter;
+        private System.Windows.Forms.ComboBox YardName;
     }
 }

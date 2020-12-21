@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,11 +61,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Yard2.cs">
+    <Compile Include="ClassClientInfo.cs" />
+    <Compile Include="ClientInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Yard2.Designer.cs">
-      <DependentUpon>Yard2.cs</DependentUpon>
+    <Compile Include="ClientInfo.Designer.cs">
+      <DependentUpon>ClientInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GYardDataSetClient.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GYardDataSetClient.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GYardDataSetYard.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GYardDataSetYard.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GYardDataSetYardAddress.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GYardDataSetYardAddress.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SearchClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchClient.Designer.cs">
+      <DependentUpon>SearchClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YardAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YardAdd.Designer.cs">
+      <DependentUpon>YardAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="YardAll.cs">
       <SubType>Form</SubType>
@@ -58,11 +101,11 @@
     <Compile Include="YardAll.Designer.cs">
       <DependentUpon>YardAll.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainPage.cs">
+    <Compile Include="MainScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainPage.Designer.cs">
-      <DependentUpon>MainPage.cs</DependentUpon>
+    <Compile Include="MainScreen.Designer.cs">
+      <DependentUpon>MainScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,17 +115,14 @@
     <Compile Include="Client.Designer.cs">
       <DependentUpon>Client.cs</DependentUpon>
     </Compile>
-    <Compile Include="Yard1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Yard1.Designer.cs">
-      <DependentUpon>Yard1.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Client.resx">
       <DependentUpon>Client.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainPage.resx">
-      <DependentUpon>MainPage.cs</DependentUpon>
+    <EmbeddedResource Include="ClientInfo.resx">
+      <DependentUpon>ClientInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainScreen.resx">
+      <DependentUpon>MainScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -93,15 +133,48 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Yard1.resx">
-      <DependentUpon>Yard1.cs</DependentUpon>
+    <EmbeddedResource Include="SearchClient.resx">
+      <DependentUpon>SearchClient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Yard2.resx">
-      <DependentUpon>Yard2.cs</DependentUpon>
+    <EmbeddedResource Include="YardAdd.resx">
+      <DependentUpon>YardAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="YardAll.resx">
       <DependentUpon>YardAll.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="GYardDataSetClient.xsc">
+      <DependentUpon>GYardDataSetClient.xsd</DependentUpon>
+    </None>
+    <None Include="GYardDataSetClient.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GYardDataSetClient.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GYardDataSetClient.xss">
+      <DependentUpon>GYardDataSetClient.xsd</DependentUpon>
+    </None>
+    <None Include="GYardDataSetYard.xsc">
+      <DependentUpon>GYardDataSetYard.xsd</DependentUpon>
+    </None>
+    <None Include="GYardDataSetYard.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GYardDataSetYard.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GYardDataSetYard.xss">
+      <DependentUpon>GYardDataSetYard.xsd</DependentUpon>
+    </None>
+    <None Include="GYardDataSetYardAddress.xsc">
+      <DependentUpon>GYardDataSetYardAddress.xsd</DependentUpon>
+    </None>
+    <None Include="GYardDataSetYardAddress.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GYardDataSetYardAddress.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GYardDataSetYardAddress.xss">
+      <DependentUpon>GYardDataSetYardAddress.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -114,6 +187,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GYard.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GYard_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>GYard.mdf</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,3 +1,6 @@
+C:\Users\Kristina\source\repos\GY_V0\GY_V0\bin\Release\GYard.mdf
+C:\Users\Kristina\source\repos\GY_V0\GY_V0\bin\Release\GYard_log.ldf
+C:\Users\Kristina\source\repos\GY_V0\GY_V0\bin\Release\GY_V0.mdf
 C:\Users\Kristina\source\repos\GY_V0\GY_V0\bin\Release\GY_V0.exe.config
 C:\Users\Kristina\source\repos\GY_V0\GY_V0\bin\Release\GY_V0.exe
 C:\Users\Kristina\source\repos\GY_V0\GY_V0\bin\Release\GY_V0.pdb
@@ -5,6 +8,7 @@ C:\Users\Kristina\source\repos\GY_V0\GY_V0\obj\Release\GY_V0.csprojAssemblyRefer
 C:\Users\Kristina\source\repos\GY_V0\GY_V0\obj\Release\GY_V0.Client.resources
 C:\Users\Kristina\source\repos\GY_V0\GY_V0\obj\Release\GY_V0.MainPage.resources
 C:\Users\Kristina\source\repos\GY_V0\GY_V0\obj\Release\GY_V0.Properties.Resources.resources
+C:\Users\Kristina\source\repos\GY_V0\GY_V0\obj\Release\GY_V0.Search_Client.resources
 C:\Users\Kristina\source\repos\GY_V0\GY_V0\obj\Release\GY_V0.Yard1.resources
 C:\Users\Kristina\source\repos\GY_V0\GY_V0\obj\Release\GY_V0.Yard2.resources
 C:\Users\Kristina\source\repos\GY_V0\GY_V0\obj\Release\GY_V0.YardAll.resources
